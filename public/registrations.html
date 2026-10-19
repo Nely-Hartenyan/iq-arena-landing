@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="hy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IQ ARENA — գրանցումներ</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #07080d;
+        color: #f6f3ea;
+      }
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+      p {
+        color: #b7b2a4;
+      }
+      form,
+      .error {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin: 20px 0;
+      }
+      input,
+      button {
+        font: inherit;
+        border-radius: 999px;
+      }
+      input {
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: transparent;
+        color: inherit;
+      }
+      button {
+        padding: 12px 18px;
+        border: 0;
+        background: #e8b931;
+        color: #1a1304;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 12px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: #e8b931;
+        font-size: 13px;
+      }
+      .error {
+        color: #ffb4b4;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Գրանցված թիմեր</h1>
+      <form id="unlock">
+        <input id="key" type="password" placeholder="Գաղտնաբառ" autocomplete="current-password" />
+        <button type="submit">Բացել</button>
+      </form>
+      <p id="message"></p>
+      <table hidden>
+        <thead>
+          <tr>
+            <th>Ժամ</th>
+            <th>Թիմ</th>
+            <th>Մասնակիցներ</th>
+            <th>Որտեղից</th>
+            <th>Կապ</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <script>
+      const storageKey = 'iq-arena-admin'
+      const form = document.querySelector('#unlock')
+      const keyInput = document.querySelector('#key')
+      const message = document.querySelector('#message')
+      const table = document.querySelector('table')
+      const tbody = document.querySelector('tbody')
+
+      const load = async (key) => {
+        const response = await fetch('/api/registrations', { headers: { 'x-admin-key': key } })
+        if (response.status === 401) {
+          sessionStorage.removeItem(storageKey)
+          message.textContent = 'Սխալ գաղտնաբառ'
+          table.hidden = true
+          return
+        }
+        if (!response.ok) {
+          message.textContent = 'Չհաջողվեց բեռնել ցանկը'
+          return
+        }
+        sessionStorage.setItem(storageKey, key)
+        const entries = await response.json()
+        form.hidden = true
+        message.textContent = entries.length + ' հայտ'
+        tbody.replaceChildren(
+          ...entries.map((entry) => {
+            const row = document.createElement('tr')
+            const from =
+              entry.origin === 'college'
+                ? 'European College of Armenia, ' + entry.faculty
+                : entry.school
+            const cells = [
+              new Date(entry.createdAt).toLocaleString('hy-AM'),
+              entry.team,
+              entry.members.join('\n'),
+              from,
+              entry.contact,
+            ]
+            for (const value of cells) {
+              const cell = document.createElement('td')
+              cell.textContent = value
+              row.append(cell)
+            }
+            return row
+          }),
+        )
+        table.hidden = false
+      }
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        load(keyInput.value)
+      })
+
+      const saved = sessionStorage.getItem(storageKey)
+      if (saved) load(saved)
+    </script>
+  </body>
+</html>
