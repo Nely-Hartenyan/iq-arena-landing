@@ -1,0 +1,19 @@
+src/components/Register/Register.tsx
+  s_a69fcb4149c1ee::t_997b1698eb6656 73-85,93-95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6e5b67347d48ef31a3afdcc691d5ed093e71868c",
+  "prompts": {},
+  "sessions": {
+    "s_a69fcb4149c1ee": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "490515b1-fc87-4ffa-b8c3-3b2d0886f99d",
+        "model": "default"
+      },
+      "human_author": "Nely <hartenyan.nely1498@gmail.com>"
+    }
+  }
+}
