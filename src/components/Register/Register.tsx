@@ -70,6 +70,19 @@ export function Register() {
     }
   }
 
+  const registerAnother = () => {
+    setValues({
+      team: '',
+      members: ['', '', '', ''],
+      origin: '',
+      faculty: '',
+      school: '',
+      contact: '',
+    })
+    setErrors({})
+    setStatus('idle')
+  }
+
   if (status === 'sent') {
     return (
       <section className={styles.section} id="register">
@@ -77,6 +90,9 @@ export function Register() {
           <p className={styles.kicker}>Գրանցում</p>
           <h2>Թիմը գրանցված է</h2>
           <p>Հայտը պահված է։ Կազմակերպիչները կկապվեն ձեզ հետ։</p>
+          <button className={styles.submit} type="button" onClick={registerAnother}>
+            Գրանցել այլ թիմ
+          </button>
         </div>
       </section>
     )
