@@ -59,7 +59,7 @@ export function adminAllowed(key: string | undefined): boolean {
 }
 
 function useBlob() {
-  if (process.env.BLOB_READ_WRITE_TOKEN) return true
+  if (process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID) return true
   if (process.env.VERCEL) throw new Error('blob-missing')
   return false
 }
