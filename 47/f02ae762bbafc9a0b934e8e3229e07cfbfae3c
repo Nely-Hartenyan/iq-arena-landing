@@ -1,0 +1,93 @@
+.oxlintrc.json
+  s_a69fcb4149c1ee::t_f94db33897d2f3 1-8
+README.md
+  s_a69fcb4149c1ee::t_7119e95886375a 1-32
+package-lock.json
+  s_a69fcb4149c1ee::t_8502e3594e8d90 1-2008
+package.json
+  s_a69fcb4149c1ee::t_ad115a0511a3f4 1-26
+src/components/Finals/Finals.tsx
+  s_a69fcb4149c1ee::t_b3f966c41ed349 1-35
+src/components/Header/Header.module.css
+  s_a69fcb4149c1ee::t_118045a9112d5b 1-150
+src/components/Header/Header.tsx
+  s_a69fcb4149c1ee::t_295812f79dade2 1-51
+src/main.tsx
+  s_a69fcb4149c1ee::t_ea4161d3636269 1-10
+tsconfig.app.json
+  s_a69fcb4149c1ee::t_ae18342ee14d32 1-26
+tsconfig.json
+  s_a69fcb4149c1ee::t_cda2f587e7497b 1-7
+.env.example
+  s_a69fcb4149c1ee::t_77fe68bfe85fb2 1-6
+.gitignore
+  s_a69fcb4149c1ee::t_6d20fc51ff34e6 1-28
+api/registrations.ts
+  s_a69fcb4149c1ee::t_acf39f958a98ba 1-35
+index.html
+  s_a69fcb4149c1ee::t_84f7707b5966b2 1-24
+public/favicon.svg
+  s_a69fcb4149c1ee::t_ef5b17e946a7cb 1-4
+public/registrations.html
+  s_a69fcb4149c1ee::t_5772468a90e6e7 1-151
+server/registrations.ts
+  s_a69fcb4149c1ee::t_c3fd083e65baff 1-87
+server/store.ts
+  s_a69fcb4149c1ee::t_34ff4118e08319 1-140
+src/App.tsx
+  s_a69fcb4149c1ee::t_6ee85f489e0097 1-25
+src/components/About/About.module.css
+  s_a69fcb4149c1ee::t_f59ae5bff40c0b 1-54
+src/components/About/About.tsx
+  s_a69fcb4149c1ee::t_8fda346828d602 1-18
+src/components/Finals/Finals.module.css
+  s_a69fcb4149c1ee::t_b8cdc46c31bbff 1-102
+src/components/Footer/Footer.module.css
+  s_a69fcb4149c1ee::t_9ca8e974831f83 1-26
+src/components/Footer/Footer.tsx
+  s_a69fcb4149c1ee::t_c334e61bd9469d 1-11
+src/components/Format/Format.module.css
+  s_a69fcb4149c1ee::t_9b9e2424cc3e91 1-81
+src/components/Format/Format.tsx
+  s_a69fcb4149c1ee::t_77b1da4de7506d 1-28
+src/components/Hero/Hero.module.css
+  s_a69fcb4149c1ee::t_80a7c334fec0c8 1-165
+src/components/Hero/Hero.tsx
+  s_a69fcb4149c1ee::t_014ed110ef78ef 1-33
+src/components/Register/Register.module.css
+  s_a69fcb4149c1ee::t_581ddac7a729b8 1-221
+src/components/Register/Register.tsx
+  s_a69fcb4149c1ee::t_64d8e7b6ec0a65 1-195
+src/components/Rounds/Rounds.module.css
+  s_a69fcb4149c1ee::t_e20980ed7df911 1-230
+src/components/Rounds/Rounds.tsx
+  s_a69fcb4149c1ee::t_bc5bf3b0abedcb 1-71
+src/content.ts
+  s_a69fcb4149c1ee::t_2d0feecf856f2a 1-161
+src/index.css
+  s_a69fcb4149c1ee::t_55780b534eff68 1-81
+src/lib/register.ts
+  s_a69fcb4149c1ee::t_04162d0242145e 1-20
+tsconfig.node.json
+  s_a69fcb4149c1ee::t_0ff54a9a7fa298 1-23
+vercel.json
+  s_a69fcb4149c1ee::t_2d6afda5a1a04e 1-3
+vite.config.ts
+  s_a69fcb4149c1ee::t_ed7fda7e4c69f3 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "47f02ae762bbafc9a0b934e8e3229e07cfbfae3c",
+  "prompts": {},
+  "sessions": {
+    "s_a69fcb4149c1ee": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "490515b1-fc87-4ffa-b8c3-3b2d0886f99d",
+        "model": "default"
+      },
+      "human_author": "Nely <hartenyan.nely1498@gmail.com>"
+    }
+  }
+}
