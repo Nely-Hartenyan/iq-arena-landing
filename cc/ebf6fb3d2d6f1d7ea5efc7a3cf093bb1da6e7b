@@ -1,0 +1,20 @@
+src/content.ts
+  s_a69fcb4149c1ee::t_d1ca490cc37bd5 149,151-153
+  s_a69fcb4149c1ee::t_5e2c07fb660bc9 141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ccebf6fb3d2d6f1d7ea5efc7a3cf093bb1da6e7b",
+  "prompts": {},
+  "sessions": {
+    "s_a69fcb4149c1ee": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "490515b1-fc87-4ffa-b8c3-3b2d0886f99d",
+        "model": "default"
+      },
+      "human_author": "Nely <hartenyan.nely1498@gmail.com>"
+    }
+  }
+}
